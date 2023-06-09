@@ -14,10 +14,18 @@
                     <option class="pageRoomsGrid__selectInput__option" value="" hidden>
                         Order by price
                     </option>
-                    <option class="pageRoomsGrid__selectInput__option" value="1">
+                    @if($order === 1)
+                    <option class='pageRoomsGrid__selectInput__option' selected value='1'>
+                        @else
+                    <option class='pageRoomsGrid__selectInput__option' value='1'>
+                        @endif
                         Ascendent
                     </option>
-                    <option class="pageRoomsGrid__selectInput__option" value="-1">
+                    @if($order === -1)
+                    <option class='pageRoomsGrid__selectInput__option' selected value='-1'>
+                        @else
+                    <option class='pageRoomsGrid__selectInput__option' value='-1'>
+                        @endif
                         Descendent
                     </option>
                 </select>

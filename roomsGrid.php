@@ -31,4 +31,4 @@ $roomsData = $roomManager->getAllRooms(6, $currentPage, $order);
 $rooms = $roomsData['rooms'];
 $totalPages = $roomsData['totalPages'];
 
-echo $blade->run('roomsGrid', ['rooms' => $rooms, 'pages' => $totalPages, 'currentPage' => $currentPage, 'baseUrl' => $baseUrl, 'icons' => $icons]);
+echo $blade->run('roomsGrid', ['rooms' => $rooms, 'pages' => $totalPages, 'currentPage' => $currentPage, 'order' => $order, 'baseUrl' => $baseUrl, 'icons' => $icons]);

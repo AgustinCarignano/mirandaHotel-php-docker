@@ -15,7 +15,9 @@ abstract class DB_Manager
     public function executeQuery($query, $param = [])
     {
         $stmt = $this->conn->prepare($query);
-        count($param) !== 0 && $stmt->bind_param($param['type'], ...$param['value']);
+        if (count($param) !== 0) {
+            $stmt->bind_param($param['type'], ...$param['value']);
+        }
         $stmt->execute();
         $result = $stmt->get_result();
         return $result;

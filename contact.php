@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         }
     }
     if ($isCorrectForm) {
-        $sanitizateContact = [];
+        $sanitizatedContact = [];
         foreach ($contact as $key => $value) {
-            $sanitizateContact[$key] = filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS);
+            $sanitizatedContact[$key] = filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS);
         }
-        $contactManager->postContact($sanitizateContact);
+        $contactManager->postContact($sanitizatedContact);
         foreach ($contact as $key => $value) {
             $contact[$key] = '';
         }

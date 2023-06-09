@@ -56,6 +56,7 @@ echo $blade->run('roomsList', [
     'checkIn' => $targetCheckIn,
     'checkOut' => $targetCheckOut,
     'currentPage' => $currentPage,
+    'order' => $order,
     'urlToLink' => $urlToLink,
     'icons' => $icons,
     'roomDetailLink' => $roomDetailLink
